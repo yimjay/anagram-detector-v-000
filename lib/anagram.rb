@@ -12,7 +12,7 @@ class Anagram
       if anagram.chars.sort.join == @word.chars.sort.join 
         anagram
       else
-        anagram = ""
+        array.delete(anagram)
       end
     end
   end
