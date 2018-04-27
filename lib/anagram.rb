@@ -12,6 +12,7 @@ class Anagram
       else
         @results = []
       end
+    end
     @results
   end
   
