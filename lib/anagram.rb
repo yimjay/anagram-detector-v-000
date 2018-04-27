@@ -9,7 +9,7 @@ class Anagram
   
   def match(array)
     array.each_with_index do |anagram, index|
-      array.delete_at(index) if if anagram.chars.sort.join != @word.chars.sort.join
+      array.delete_at(index) if anagram.chars.sort.join != @word.chars.sort.join
     end
   end
   
