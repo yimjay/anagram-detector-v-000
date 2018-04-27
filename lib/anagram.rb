@@ -8,7 +8,8 @@ class Anagram
   end
   
   def match(array)
-    array.each_with_index do |anagram, index|
+    result = []
+    array.select do |anagram|
       array.delete_at(index) if (anagram.chars.sort.join) != (@word.chars.sort.join)
     end
   end
