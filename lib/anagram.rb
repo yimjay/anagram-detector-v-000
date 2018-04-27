@@ -14,7 +14,6 @@ class Anagram
         result << anagram
       end
     end
-    result
   end
   
 end
