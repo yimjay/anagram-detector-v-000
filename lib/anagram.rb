@@ -10,7 +10,7 @@ class Anagram
   def match(array)
     result = []
     array.select do |anagram|
-      if (anagram.chars.sort.join) == (@word.chars.sort.join)
+      if anagram.chars.sort.join == @word.chars.sort.join
         result << anagram
       end
     end
