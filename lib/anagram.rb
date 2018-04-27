@@ -2,7 +2,7 @@ require "pry"
 
 class Anagram
   attr_accessor :word
-  RESULTS = []
+  @@results = []
   
   def initialize(word)
     @word = word
@@ -12,10 +12,10 @@ class Anagram
     array.collect do |anagram|
       if anagram.chars.sort.join == @word.chars.sort.join 
         binding.pry
-        RESULTS << anagram
+        @@results << anagram
       end
     end
-    RESULTS
+    @@results
   end
   
 end
