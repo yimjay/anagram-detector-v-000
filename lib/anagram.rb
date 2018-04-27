@@ -8,7 +8,9 @@ class Anagram
   end
   
   def match(array)
-    array.collect {|anagram| anagram.chars.sort.join == @word.chars.sort.join}
+    array.each_with_index |anagram, index|
+      if anagram.chars.sort.join != @word.chars.sort.join
+        array[index]
   end
   
 end
