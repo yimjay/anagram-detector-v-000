@@ -2,7 +2,6 @@ require "pry"
 
 class Anagram
   attr_accessor :word, :results
-  @results = []
   
   def initialize(word)
     @word = word
