@@ -2,20 +2,20 @@ require "pry"
 
 class Anagram
   attr_accessor :word
-  @@results = []
   
   def initialize(word)
     @word = word
   end
   
   def match(array)
+    @results = []
     array.collect do |anagram|
       if anagram.chars.sort.join == @word.chars.sort.join 
         binding.pry
-        @@results << anagram
+        @results << anagram
       end
     end
-    @@results
+    @results
   end
   
 end
