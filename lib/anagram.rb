@@ -11,6 +11,8 @@ class Anagram
     array.collect do |anagram|
       if anagram.chars.sort.join == @word.chars.sort.join 
         anagram
+      else
+        anagram = ""
       end
     end
   end
