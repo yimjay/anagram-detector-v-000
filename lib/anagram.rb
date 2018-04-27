@@ -1,7 +1,7 @@
 require "pry"
 
 class Anagram
-  attr_accessor :word
+  attr_accessor :word, :results
   @results = []
   
   def initialize(word)
@@ -13,8 +13,6 @@ class Anagram
       if anagram.chars.sort.join == @word.chars.sort.join 
         binding.pry
         @results << anagram
-      else
-        @results = []
       end
     end
     @results
