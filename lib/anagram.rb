@@ -11,6 +11,7 @@ class Anagram
     array.each_with_index do |anagram, index|
       if anagram.chars.sort.join != @word.chars.sort.join
         array.delete_at(index)
+      binding.pry
       end
     end
   end
