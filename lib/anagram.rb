@@ -8,14 +8,11 @@ class Anagram
   end
   
   def match(array)
-    results = []
     array.collect do |anagram|
       if anagram.chars.sort.join == @word.chars.sort.join 
-        binding.pry
-        results << anagram
+        anagram
       end
     end
-    results
   end
   
 end
